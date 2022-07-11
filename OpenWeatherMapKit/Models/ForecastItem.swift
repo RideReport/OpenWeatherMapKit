@@ -14,4 +14,7 @@ public struct ForecastItem : Codable {
     public var main: WeatherItem
     public var weather: [WeatherDescriptor]
     public var wind: Wind
+    public var clouds: Clouds?
+    public var rain: Rain?
+    public var snow: Snow?
 }

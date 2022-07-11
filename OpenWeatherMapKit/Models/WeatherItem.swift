@@ -35,13 +35,15 @@ public struct WeatherItem : Codable {
     public var humidity: Int
     
     var temp: Double
+    var feels_like: Double
     var temp_min: Double
     var temp_max: Double
 
-    init(currentTemp: Double, maxTemp: Double, minTemp: Double) {
+    init(currentTemp: Double, maxTemp: Double, minTemp: Double, feels_like: Double) {
         self.temp = currentTemp
         self.temp_max = maxTemp
         self.temp_min = minTemp
+        self.feels_like = feels_like
 
         self.pressure = 0.0
         self.humidity = 0
@@ -51,6 +53,7 @@ public struct WeatherItem : Codable {
         case temp = "temp"
         case temp_min = "temp_min"
         case temp_max = "temp_max"
+        case feels_like = "feels_like"
         case pressure = "pressure"
         case humidity = "humidity"
     }

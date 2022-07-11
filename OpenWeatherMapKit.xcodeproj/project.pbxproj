@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		841CBD6B287BCD15000F0685 /* Rain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CBD6A287BCD15000F0685 /* Rain.swift */; };
+		841CBD6D287BCD1B000F0685 /* Snow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CBD6C287BCD1B000F0685 /* Snow.swift */; };
+		841CBD6F287BCD96000F0685 /* Clouds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CBD6E287BCD96000F0685 /* Clouds.swift */; };
 		876623921FF5EAD1003F1867 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876623911FF5EAD1003F1867 /* NetworkManager.swift */; };
 		876DB5621FF4986C00823C2E /* RequestBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876DB5611FF4986C00823C2E /* RequestBuilderTests.swift */; };
 		8784A3A62076505900340A7E /* Wind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8784A3A52076505900340A7E /* Wind.swift */; };
@@ -54,6 +57,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		841CBD6A287BCD15000F0685 /* Rain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rain.swift; sourceTree = "<group>"; };
+		841CBD6C287BCD1B000F0685 /* Snow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snow.swift; sourceTree = "<group>"; };
+		841CBD6E287BCD96000F0685 /* Clouds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clouds.swift; sourceTree = "<group>"; };
 		876623911FF5EAD1003F1867 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		876DB5611FF4986C00823C2E /* RequestBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilderTests.swift; sourceTree = "<group>"; };
 		8784A3A52076505900340A7E /* Wind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wind.swift; sourceTree = "<group>"; };
@@ -157,9 +163,12 @@
 			isa = PBXGroup;
 			children = (
 				8784A3A52076505900340A7E /* Wind.swift */,
+				841CBD6A287BCD15000F0685 /* Rain.swift */,
+				841CBD6C287BCD1B000F0685 /* Snow.swift */,
 				87A9E4C720778F0400855405 /* WeatherItem.swift */,
 				87A9E4C920778FFD00855405 /* ForecastItemsList.swift */,
 				87A9E4CB2077901A00855405 /* ForecastItem.swift */,
+				841CBD6E287BCD96000F0685 /* Clouds.swift */,
 				87A9E4CD2077903700855405 /* WeatherDescriptor.swift */,
 			);
 			path = Models;
@@ -411,12 +420,15 @@
 				87EA0AD71FECB3D200E3EEEA /* OpenWeatherMapKit.swift in Sources */,
 				87A9E4CE2077903700855405 /* WeatherDescriptor.swift in Sources */,
 				87A9E4CC2077901A00855405 /* ForecastItem.swift in Sources */,
+				841CBD6B287BCD15000F0685 /* Rain.swift in Sources */,
 				87F699372020331800921882 /* Functions.swift in Sources */,
 				87A9E4C820778F0400855405 /* WeatherItem.swift in Sources */,
 				876623921FF5EAD1003F1867 /* NetworkManager.swift in Sources */,
 				87B862D11FF2ADCD00E9E38D /* Constants.swift in Sources */,
 				87B862D31FF2B1EA00E9E38D /* RequestBuilder.swift in Sources */,
 				8784A3A62076505900340A7E /* Wind.swift in Sources */,
+				841CBD6D287BCD1B000F0685 /* Snow.swift in Sources */,
+				841CBD6F287BCD96000F0685 /* Clouds.swift in Sources */,
 				87A9E4D02077940D00855405 /* WeatherMode.swift in Sources */,
 				87A9E4CA20778FFD00855405 /* ForecastItemsList.swift in Sources */,
 			);
