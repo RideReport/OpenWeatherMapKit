@@ -15,4 +15,5 @@ import Foundation
 enum WeatherMode {
     case current
     case fiveDays
+    case historical
 }

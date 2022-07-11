@@ -24,7 +24,7 @@ class RequestBuilderTests: XCTestCase {
             .build()
 
         XCTAssertNotNil(url)
-        XCTAssertEqual(url, "\(Constants.Endpoints.kOpenWeatherMapApiEndPoint)/weather?q=\(city)")
+        XCTAssertEqual(url, "\(Constants.Endpoints.kOpenWeatherMapCurrentApiEndPoint)/weather?q=\(city)")
     }
 
     func test_requestBuildWithCityNameAndCountry() {
@@ -35,7 +35,7 @@ class RequestBuilderTests: XCTestCase {
             .build()
 
         XCTAssertNotNil(url)
-        XCTAssertEqual(url, "\(Constants.Endpoints.kOpenWeatherMapApiEndPoint)/weather?q=\(city),\(countryCode)")
+        XCTAssertEqual(url, "\(Constants.Endpoints.kOpenWeatherMapCurrentApiEndPoint)/weather?q=\(city),\(countryCode)")
     }
 
     func test_requestBuildWithCityNameAndCountryAndToken() {
@@ -47,7 +47,7 @@ class RequestBuilderTests: XCTestCase {
             .build()
 
         XCTAssertNotNil(url)
-        XCTAssertEqual(url, "\(Constants.Endpoints.kOpenWeatherMapApiEndPoint)/weather?q=\(city),\(countryCode)&appid=\(token)")
+        XCTAssertEqual(url, "\(Constants.Endpoints.kOpenWeatherMapCurrentApiEndPoint)/weather?q=\(city),\(countryCode)&appid=\(token)")
     }
 
     func test_requestBuildWithCoordinates() {
@@ -58,7 +58,7 @@ class RequestBuilderTests: XCTestCase {
             .build()
 
         XCTAssertNotNil(url)
-        XCTAssertEqual(url, "\(Constants.Endpoints.kOpenWeatherMapApiEndPoint)/weather?lat=\(latitude)&lon=\(longitude)")
+        XCTAssertEqual(url, "\(Constants.Endpoints.kOpenWeatherMapCurrentApiEndPoint)/weather?lat=\(latitude)&lon=\(longitude)")
     }
 
     func test_requestBuildWithCoordinatesAndToken() {
@@ -70,7 +70,7 @@ class RequestBuilderTests: XCTestCase {
             .build()
 
         XCTAssertNotNil(url)
-        XCTAssertEqual(url, "\(Constants.Endpoints.kOpenWeatherMapApiEndPoint)/weather?lat=\(latitude)&lon=\(longitude)&appid=\(token)")
+        XCTAssertEqual(url, "\(Constants.Endpoints.kOpenWeatherMapCurrentApiEndPoint)/weather?lat=\(latitude)&lon=\(longitude)&appid=\(token)")
     }
 
 }

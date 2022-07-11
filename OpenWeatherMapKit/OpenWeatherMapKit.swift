@@ -100,5 +100,23 @@ public class OpenWeatherMapKit {
                 .build(),
                                     callback: callback)
     }
+    
+    /// Request weather forecast on next 5 days for provided geographical coordinate.
+    ///
+    /// - Parameters:
+    ///   - coord: geo coordinate as a tuple with $0=latitude and $1=longitude
+    ///   - callback: closure that will be invoked as the result of API call
+    public func historicalWeather(forCoordiante coord: (latitude: Double, longitude: Double), date: Date,
+                                           callback: @escaping (ForecastItemsList?, Error?) -> ()) {
+        NetworkManager.instance.get(from:
+            RequestBuilder()
+                .setToken(token: OpenWeatherMapKit.token)
+                .setWeatherMode(mode: .historical)
+                .setHistoricalDate(date: date)
+                .setLatitude(lat: coord.latitude)
+                .setLongitude(lon: coord.longitude)
+                .build(),
+                                    callback: callback)
+    }
 
 }

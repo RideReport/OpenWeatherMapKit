@@ -122,5 +122,23 @@ class OpenWeatherMapKitITTests: XCTestCase {
         XCTAssertNotNil(result)
         XCTAssertNil(caughtError)
     }
+    
+    func test_historical_weather_forGeoCoordinate() {
+        var result: ForecastItemsList?
+        var caughtError: Error?
+
+        let ex = expectation(description: "Historical weather forecast")
+
+        OpenWeatherMapKit.instance.historicalWeather(forCoordiante: (latitude: 53.2610313, longitude: 50.0579958), date: Date().addingTimeInterval(-7*24*60*60)) { (weatherItem, error) in
+            result = weatherItem
+            caughtError = error
+            ex.fulfill()
+        }
+
+        wait(for: [ex], timeout: 5.0)
+
+        XCTAssertNotNil(result)
+        XCTAssertNil(caughtError)
+    }
 
 }

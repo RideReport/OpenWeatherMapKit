@@ -278,9 +278,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 87EA0AD01FECB12800E3EEEA /* Build configuration list for PBXNativeTarget "OpenWeatherMapKit" */;
 			buildPhases = (
+				87EA0AB91FECB12800E3EEEA /* Headers */,
 				87EA0AB71FECB12800E3EEEA /* Sources */,
 				87EA0AB81FECB12800E3EEEA /* Frameworks */,
-				87EA0AB91FECB12800E3EEEA /* Headers */,
 				87EA0ABA1FECB12800E3EEEA /* Resources */,
 			);
 			buildRules = (

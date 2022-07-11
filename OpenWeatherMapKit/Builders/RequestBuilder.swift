@@ -13,15 +13,14 @@ import Foundation
 internal class RequestBuilder {
 
     private var token: String?
-    private var serviceUrl: String
     private var weatherMode: WeatherMode
     private var latitude: Double?
     private var longitude: Double?
     private var city: String?
     private var countryCode: String?
+    private var historicalDate: Date?
 
     init() {
-        self.serviceUrl = Constants.Endpoints.kOpenWeatherMapApiEndPoint
         self.weatherMode = .current
     }
 
@@ -37,6 +36,11 @@ internal class RequestBuilder {
 
     func setLongitude(lon: Double) -> RequestBuilder {
         self.longitude = lon
+        return self
+    }
+    
+    func setHistoricalDate(date: Date) -> RequestBuilder {
+        self.historicalDate = date
         return self
     }
 
@@ -59,12 +63,19 @@ internal class RequestBuilder {
 
         // TODO: add configuration validation
         // TODO: cover by unit test
+        
+        var serviceUrl = ""
 
         switch weatherMode {
         case .fiveDays:
-            serviceUrl += "/forecast?"
+            serviceUrl = Constants.Endpoints.kOpenWeatherMapCurrentApiEndPoint + "/forecast?"
+        case .historical:
+            serviceUrl = Constants.Endpoints.kOpenWeatherMapHistoryApiEndPoint + "/history/city?"
+            if let date = historicalDate {
+                serviceUrl += "start=\(date.timeIntervalSince1970)"
+            }
         default:
-            serviceUrl += "/weather?"
+            serviceUrl = Constants.Endpoints.kOpenWeatherMapCurrentApiEndPoint + "/weather?"
         }
 
         if let city = city {
